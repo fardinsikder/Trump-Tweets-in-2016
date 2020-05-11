@@ -1,0 +1,9 @@
+Most of his tweets contained a link. Thus, the word "http" appeared a lot. 
+
+I modified the excel file using the code below:
+
+=IFERROR((LEFT(A1,LEN(A1)-(LEN(A1)-(FIND("http",A1,1)-1)))),A1)
+
+This basically removed the links and if there were no links, the original tweet was kept.
+
+The new columnn is called contentmod.
